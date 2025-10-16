@@ -1,0 +1,279 @@
+/* --- GLOBAL STYLES --- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #a0a0a0;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar-links a {
+    margin: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* --- HERO SECTION (index.html) --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.hero-title .char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* --- CHOOSE YOUR PATH SECTION (index.html) --- */
+.choose-path {
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.choose-path h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+.path-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.path-card {
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 15px;
+    width: 300px;
+    border: 1px solid #333;
+}
+
+.path-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* --- PRICING SECTION (index.html) --- */
+.pricing-section {
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.pricing-section h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    perspective: 1000px;
+}
+
+.pricing-card {
+    background-color: #111111;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 40px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0; /* Initial state for animation */
+    transform: translateY(50px); /* Initial state for animation */
+    will-change: transform;
+    transition: transform 0.4s ease;
+}
+
+.pricing-card h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.pricing-card .price {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.pricing-card .price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #a0a0a0;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.pricing-card ul li {
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* --- FOOTER --- */
+.footer {
+    text-align: center;
+    padding: 50px 5%;
+    margin-top: 100px;
+    border-top: 1px solid #333;
+}
+
+/* --- FEATURES HEADER (features.html) --- */
+.features-header {
+    text-align: center;
+    padding: 200px 5% 100px;
+}
+
+.features-header h1 {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.features-header .char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* --- FEATURES CONTAINER (features.html) --- */
+
+.category-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 80px;
+    border-top: 1px solid #333;
+    padding-top: 80px;
+}
+.features-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.feature-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+    margin-bottom: 100px;
+    gap: 5%;
+    perspective: 1500px;
+}
+
+.text-column {
+    flex-basis: 45%;
+    opacity: 0; /* Initial state for animation */
+}
+
+.text-column h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.text-column p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #a0a0a0;
+}
+
+.image-holder-column {
+    flex-basis: 50%;
+}
+
+.image-holder {
+    width: 100%;
+    height: 60vh;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 20px;
+    /* Initial state for animation */
+    opacity: 0;
+    transform: translateX(100px);
+    will-change: transform;
+    transition: transform 0.4s ease;
+}
+
+.image-holder .feature-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+}
